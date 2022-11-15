@@ -70,4 +70,13 @@ public class Planet {
         }
         return NetForceExertedByY;
     }
+    //update the status of the planet
+    public void update(double dt, double fx, double fy) {
+        double aX = fx / mass;
+        double ay = fy / mass;
+        xxVel += aX * dt;
+        yyVel += ay * dt;
+        xxPos += xxVel * dt;
+        yyPos += yyVel * dt;
+    }
 }
